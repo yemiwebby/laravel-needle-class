@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
+Route::get('/', [
+    'uses' => 'PostController@index',
+    'as' => 'index'
+]);
 
 Route::get('/sample', function() {
     return view('home.home');

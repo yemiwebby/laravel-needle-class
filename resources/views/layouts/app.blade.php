@@ -19,6 +19,22 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/ionicons.css') }}" rel="stylesheet">
+
+
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('js/jquery-3.1.1.min.js') }}"></script>
+
+    <script src="{{ asset('js/tether.min.js') }}"></script>
+
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+
+    <script src="{{ asset('js/scripts.js') }}"></script>
 </head>
 <body>
     <div id="app">
@@ -74,7 +90,14 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container-fluid">
+                @include('include.navbar')
+
+                @yield('content')
+
+                @include('include.footer')
+            </div>
+
         </main>
     </div>
 </body>

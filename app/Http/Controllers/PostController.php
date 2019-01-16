@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
+
+    public function index() {
+        $posts = DB::table('posts')->get();
+        return view('welcome', compact('posts'));
+    }
+
     public function showPost() {
         return view('post.post');
     }
